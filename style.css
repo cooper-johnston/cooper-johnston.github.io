@@ -21,6 +21,26 @@ body {
 	margin: 0 40px;
 }
 
+#scrolldown {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -60px;
+	width: 120px;
+	font-size: 22px;
+	background: #fff;
+	border-top-left-radius: 40px;
+	border-top-right-radius: 40px;
+	padding: 20px;
+	text-align: center;
+}
+
+#scrolldown h2, #scrolldown p {
+	margin: 0;
+	color: #5d88bf;
+	cursor: default;
+}
+
 #footer {
 	margin: 40px 0;
 	text-align: center;
