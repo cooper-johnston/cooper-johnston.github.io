@@ -1,0 +1,73 @@
+body {
+	font-family: sans-serif;
+	font-size: 18px;
+	color: #4f4f4f;
+	margin: 0;
+}
+
+#container {
+	width: 600px;
+	margin: 40px auto;
+}
+
+h1 {
+	font-size: 30px;
+	text-decoration: underline;
+	color: #333;
+}
+
+h2 {
+	font-size: 26px;
+}
+
+h3 {
+	font-size: 22px;
+}
+
+a, a:visited {
+	color: #104af9;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline
+}
+
+#formb, #results {
+	display: none;
+}
+
+.formfield {
+	display: block;
+	margin: 18px 0;
+}
+
+input[type=number] {
+	font-size: 18px;
+	font-family: inherit;
+	color: inherit;
+	border: 1px solid #ccc;
+	padding: 4px;
+	width: 100%;
+	border-radius: 4px;
+}
+
+input[type=number]:hover, input[type=number]:focus {
+	border-color: #4f4f4f;
+	outline: none;
+}
+
+button {
+	font-size: 18px;
+	font-family: inherit;
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 8px;
+	border-radius: 4px;
+	display: block;
+	cursor: pointer;
+}
+
+button:hover {
+	border-color: #4f4f4f;
+}
