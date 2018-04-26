@@ -10,7 +10,7 @@ body {
 	margin: 40px auto;
 }
 
-#logospace {height: 64px;}
+#logospace {height: 60px;}
 
 #menubar {
 	float: right;
@@ -25,7 +25,7 @@ body {
 	font-weight: 700;
 	letter-spacing: -0.5px;
 	display: inline-block;
-	margin: 24px 10px 0 0;
+	margin: 26px 10px 0 0;
 }
 
 #menubar a, #menubar a:visited {
@@ -168,6 +168,7 @@ body {
 #members .pagesection h2 {
 	font-family: "Montserrat", sans-serif;
 	font-size: 32px;
+	letter-spacing: -1px;
 }
 
 #footer {
