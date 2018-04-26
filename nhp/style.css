@@ -1,0 +1,218 @@
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size: 18px;
+	color: #222;
+	margin: 0;
+}
+
+.pagesection {
+	width: 900px;
+	margin: 40px auto;
+}
+
+#logospace {height: 64px;}
+
+#menubar {
+	float: right;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#menubar li {
+	font-family: "Montserrat", sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: -0.5px;
+	display: inline-block;
+	margin: 24px 10px 0 0;
+}
+
+#menubar a, #menubar a:visited {
+	color: inherit;
+	text-decoration: none;
+	padding: 8px 12px;
+	border: 2px solid #fff;
+	transition: background 0.3s, color 0.3s;
+}
+
+#menubar a:hover {color: #ff001a;}
+
+#menubar a.focused, #menubar a.focused:visited {
+	border-color: #ff001a;
+	color: #ff001a;
+}
+
+#menubar li a.focused:hover {
+	background: #ff001a;
+	color: #fff;
+}
+
+#mainquote {
+	width: 600px;
+	margin: 60px auto;
+	text-align: center;
+}
+
+#mainquote h1 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 52px;
+	letter-spacing: -1px;
+	color: #ff001a;
+}
+
+#platform {
+	width: 924px;
+	font-size: 0;
+	list-style: none;
+	padding: 0;
+	text-align: center;
+}
+
+#platform li {
+	background: #eee;
+	display: inline-block;
+	box-sizing: border-box;
+	font-size: 18px;
+	width: 284px;
+	padding: 0 16px 10px 16px;
+	margin: 0 12px 24px 12px;
+	cursor: default;
+	transition: background 0.3s;
+}
+
+#platform li:hover {background: #f8f8f8;}
+
+#platform h2 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 24px;
+	letter-spacing: -0.5px;
+	margin: 0;
+	padding: 28px 0 4px 0;
+	transition: color 0.2s;
+}
+
+#platform li:hover h2 {color: #ff001a;}
+
+#plan h1, h1.pagesection {
+	font-family: "Montserrat", sans-serif;
+	font-size: 46px;
+	letter-spacing: -1px;
+	color: #ff001a;
+}
+
+#plan ol {
+	list-style: none;
+	padding: 0;
+}
+
+#plan li {
+	counter-increment: item;
+	margin-bottom: 28px;
+}
+
+#plan li:before {
+	content: counter(item);
+	font-family: "Montserrat", sans-serif;
+	font-size: 28px;
+	font-weight: 700;
+	float: left;
+	width: 40px;
+	margin-left: -40px;
+	color: #ff001a;
+}
+
+#plan li h2 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 28px;
+	letter-spacing: -0.5px;
+	margin: 12px 0;
+}
+
+#members {overflow: hidden;}
+
+#candidates {
+	width: 924px;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+	text-align: center;
+}
+
+#candidates li {
+	display: inline-block;
+	width: 207px;
+	margin: 0 12px 24px 12px;
+	background: #eee;
+	font-size: 18px;
+	cursor: default;
+}
+
+#candidates li img {width: 207px;}
+
+#candidates li h2 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 26px;
+	letter-spacing: -1px;
+}
+
+#candidates li h2 a, #candidates li h2 a:visited {
+	color: inherit;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+#candidates li h2 a:hover {color: #ff001a;}
+
+#members .pagesection h2 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 32px;
+}
+
+#footer {
+	background: #eee;
+	margin-top: 60px;
+	padding: 40px 0;
+	text-align: center;
+}
+
+#footer a, #footer a:visited {color: #ff001a;}
+
+#footer a:hover {text-decoration: none;}
+
+@media only screen and (max-width: 800px) {
+	.pagesection {
+		width: 90%;
+		margin: 40px auto;
+	}
+
+	#topbar {text-align: center;}
+
+	#logospace {
+		display: block;
+		margin: 6px auto;
+	}
+
+	#menubar {float: none;}
+
+	#mainquote {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 0 12px;
+		margin: 40px 0;
+	}
+
+	#mainquote h1 {font-size: 40px;}
+
+	#platform, #candidates {width: 100%;}
+
+	#platform li, #candidates li {
+		margin: 12px 0;
+		width: 90%;
+	}
+
+	#plan li:before {margin-left: 0;}
+
+	#candidates li img {display: none;}
+}
