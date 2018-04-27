@@ -149,11 +149,14 @@ body {
 	cursor: default;
 }
 
-#candidates li img {width: 207px;}
+#candidates li img {
+	width: 207px;
+	height: 138px;
+	object-fit: cover;
+}
 
 #candidates li h2 {
-	font-family: "Montserrat", sans-serif;
-	font-size: 26px;
+	font-size: 22px;
 	letter-spacing: -1px;
 }
 
