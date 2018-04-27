@@ -75,6 +75,8 @@ body {
 	box-sizing: border-box;
 	font-size: 18px;
 	width: 284px;
+	height: 284px;
+	vertical-align: text-top;
 	padding: 0 16px 10px 16px;
 	margin: 0 12px 24px 12px;
 	cursor: default;
