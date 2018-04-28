@@ -5,6 +5,12 @@ body {
 	margin: 0;
 }
 
+h1, h2, #menubar li, #plan li:before {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	letter-spacing: -1px;
+}
+
 .pagesection {
 	width: 900px;
 	margin: 40px auto;
@@ -20,10 +26,7 @@ body {
 }
 
 #menubar li {
-	font-family: "Montserrat", sans-serif;
 	font-size: 20px;
-	font-weight: 700;
-	letter-spacing: -0.5px;
 	display: inline-block;
 	margin: 26px 10px 0 0;
 }
@@ -55,9 +58,7 @@ body {
 }
 
 #mainquote h1 {
-	font-family: "Montserrat", sans-serif;
 	font-size: 52px;
-	letter-spacing: -1px;
 	color: #ff001a;
 }
 
@@ -73,7 +74,6 @@ body {
 	background: #eee;
 	display: inline-block;
 	box-sizing: border-box;
-	font-size: 18px;
 	width: 284px;
 	height: 284px;
 	vertical-align: text-top;
@@ -86,9 +86,7 @@ body {
 #platform li:hover {background: #f8f8f8;}
 
 #platform h2 {
-	font-family: "Montserrat", sans-serif;
 	font-size: 24px;
-	letter-spacing: -0.5px;
 	margin: 0;
 	padding: 28px 0 4px 0;
 	transition: color 0.2s;
@@ -97,9 +95,7 @@ body {
 #platform li:hover h2 {color: #ff001a;}
 
 #plan h1, h1.pagesection {
-	font-family: "Montserrat", sans-serif;
 	font-size: 46px;
-	letter-spacing: -1px;
 	color: #ff001a;
 }
 
@@ -115,9 +111,7 @@ body {
 
 #plan li:before {
 	content: counter(item);
-	font-family: "Montserrat", sans-serif;
 	font-size: 28px;
-	font-weight: 700;
 	float: left;
 	width: 40px;
 	margin-left: -40px;
@@ -125,9 +119,7 @@ body {
 }
 
 #plan li h2 {
-	font-family: "Montserrat", sans-serif;
 	font-size: 28px;
-	letter-spacing: -0.5px;
 	margin: 12px 0;
 }
 
@@ -158,8 +150,8 @@ body {
 }
 
 #candidates li h2 {
+	font-family: "Open Sans", sans-serif;
 	font-size: 22px;
-	letter-spacing: -1px;
 }
 
 #candidates li h2 a, #candidates li h2 a:visited {
@@ -170,11 +162,7 @@ body {
 
 #candidates li h2 a:hover {color: #ff001a;}
 
-#members .pagesection h2 {
-	font-family: "Montserrat", sans-serif;
-	font-size: 32px;
-	letter-spacing: -1px;
-}
+#members .pagesection h2 {font-size: 32px;}
 
 #footer {
 	background: #eee;
