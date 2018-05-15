@@ -26,10 +26,10 @@
 
 			//Reduce size after several iterations
 
-			if (8 < iterations && iterations < 19) {
+			/*if (8 < iterations && iterations < 19) {
 				size = -1.4 * (iterations - 8) + 15;
 				console.log(iterations + ", " + size);
-			}
+			}*/
 
 			points = Fractal.getPoints(points);
 			Fractal.draw(c, points, size);
