@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Car Seating Arrangement</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h1 class="section">Car Seating Arrangement</h1>
+
+	<div id="form" class="section">
+		<p>Passenger 1</p>
+		<input type="text" value="Florence">
+
+		<p>Passenger 2</p>
+		<input type="text" value="Noah">
+
+		<p>Passenger 3</p>
+		<input type="text" value="Cooper">
+
+		<button onclick="assignSeats(true);">Assign Front</button>
+		<button onclick="assignSeats(false);">Assign Middle</button>
+	</div>
+
+	<div id="result" class="section">
+		<h2>Result</h2>
+		<p><span id="seat_name">Front passenger seat</span>: <span id="output" class="result">Nobody</span></p>
+	</div>
+
+	<script>
+		function assignSeats(mode) {
+			if (mode === false) document.getElementById("seat_name").innerHTML = "Rear middle seat";
+
+			var index = Math.floor(Math.random() * 3);
+			var passenger = document.getElementsByTagName("input")[index].value;
+
+			document.getElementById("output").innerHTML = passenger;
+
+			document.getElementById("form").style.display = "none";
+			document.getElementById("result").style.display = "block";
+		}
+	</script>
+</body>
+</html>
