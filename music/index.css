@@ -1,0 +1,18 @@
+#playlists_holder {
+	list-style: none;
+	margin: 24px 0;
+	padding: 0;
+}
+
+.playlist_cover {
+	display: block;
+	margin: 24px 0;
+	font-family: "Inter", sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.playlist_cover img {
+	margin-top: 8px;
+	width: 100%;
+}
