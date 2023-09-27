@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: "Fira Sans", Arial, sans-serif;
+    font-size: 16px;
+    color: #000;
+}
+
+#content {
+    width: 100%;
+    padding: 64px 32px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+h1 {
+    font-size: 42px;
+    margin-top: 0;
+}
+
+#portfolio-links {
+    list-style: none;
+    padding: 0;
+    margin: 42px 0;
+}
+
+#portfolio-links li {
+    margin: 16px 0;
+}
+
+#portfolio-links a, #portfolio-links a:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: #3579F6;
+    padding: 8px 12px;
+    margin: 0 6px;
+    border: 1px solid #3579F6;
+    border-radius: 4px;
+}
+
+#footer {
+    width: 100%;
+    padding: 32px;
+    border-top: 1px solid #999;
+    box-sizing: border-box;
+    text-align: center;
+    color: #777;
+}
+
+@media only screen and (min-width: 768px) {
+    #content {
+        width: 704px;
+        padding: 64px 0;
+        margin: 0 auto;
+    }
+
+    #portfolio-links a:hover {
+        text-decoration: underline;
+    }
+}
