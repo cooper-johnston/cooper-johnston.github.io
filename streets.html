@@ -28,6 +28,30 @@
             </div>
             <img id="sm" src="portfolio/santa_monica_blvd_before.png" alt="Santa Monica Boulevard current conditions">
         </div>
+
+        <div class="image-showcase content-section">
+            <h2>Fountain Ave. in West Hollywood</h2>
+            <div class="before-after" id="fa-buttons">
+                <button class="before active" onclick="showBefore('fa')">Before</button><button class="after" onclick="showAfter('fa')">After</button>
+            </div>
+            <img id="fa" src="portfolio/fountain_ave_before.png" alt="Fountain Avenue current conditions">
+        </div>
+
+        <div class="image-showcase content-section">
+            <h2>Wilshire Blvd. in Westwood</h2>
+            <div class="before-after" id="wb-buttons">
+                <button class="before active" onclick="showBefore('wb')">Before</button><button class="after" onclick="showAfter('wb')">After</button>
+            </div>
+            <img id="wb" src="portfolio/wilshire_before.png" alt="Wilshire Boulevard current conditions">
+        </div>
+
+        <div class="image-showcase content-section">
+            <h2>Eagle Rock Blvd. in Eagle Rock</h2>
+            <div class="before-after" id="er-buttons">
+                <button class="before active" onclick="showBefore('er')">Before</button><button class="after" onclick="showAfter('er')">After</button>
+            </div>
+            <img id="er" src="portfolio/eagle_rock_blvd_before.png" alt="Eagle Rock Boulevard current conditions">
+        </div>
 	</div>
 	<div id="footer">
 		<p>Website made by Cooper Johnston. Last updated September 2023.</p>
@@ -37,7 +61,10 @@
         const imgDirectory = "portfolio";
 
         const imgData = {
-            "sm": ["santa_monica_blvd", "Santa Monica Boulevard current conditions", "Santa Monica Boulevard with curb-protected bike lanes"]
+            "sm": ["santa_monica_blvd", "Santa Monica Boulevard current conditions", "Santa Monica Boulevard with curb-protected bike lanes"],
+            "fa": ["fountain_ave", "Fountain Avenue current conditions", "Fountain Avenue with a road diet and quick-build parking-protected bike lanes"],
+            "wb": ["wilshire", "Wilshire Boulevard current conditions", "Wilshire Boulevard with a bus-only lane and a two-way bike path with concrete barriers"],
+            "er": ["eagle_rock_blvd", "Eagle Rock Boulevard current conditions", "Eagle Rock Boulevard with a sidewalk-level bike lane and extra street trees"]
         };
 
         function changeImg(imgId, imgUrl, imgAlt) {
