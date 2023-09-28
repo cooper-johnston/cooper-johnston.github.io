@@ -23,14 +23,56 @@
 
 		<div class="image-showcase content-section">
             <h2>Santa Monica Blvd. in West Hollywood</h2>
-            <div class="before-after">
-                <button class="before active">Before</button><button class="after">After</button>
+            <div class="before-after" id="sm-buttons">
+                <button class="before active" onclick="showBefore('sm')">Before</button><button class="after" onclick="showAfter('sm')">After</button>
             </div>
-            <img src="portfolio/santa_monica_blvd_before.png" alt="Santa Monica Boulevard current conditions">
+            <img id="sm" src="portfolio/santa_monica_blvd_before.png" alt="Santa Monica Boulevard current conditions">
         </div>
 	</div>
 	<div id="footer">
 		<p>Website made by Cooper Johnston. Last updated September 2023.</p>
 	</div>
+
+    <script type="text/javascript">
+        const imgDirectory = "portfolio";
+
+        const imgData = {
+            "sm": ["santa_monica_blvd", "Santa Monica Boulevard current conditions", "Santa Monica Boulevard with curb-protected bike lanes"]
+        };
+
+        function changeImg(imgId, imgUrl, imgAlt) {
+            imgElement = document.getElementById(imgId);
+            imgElement.src = imgUrl;
+            imgElement.alt = imgAlt;
+        }
+
+        function toggleButtons(streetId) {
+            buttonsElement = document.getElementById(streetId + "-buttons");
+
+            for (const button of buttonsElement.children) {
+                if (button.classList.contains("active")) {
+                    button.classList.remove("active");
+                } else {
+                    button.classList.add("active");
+                }
+            }
+        }
+
+        function showBefore(streetId) {
+            url = imgDirectory + "/" + imgData[streetId][0] + "_before.png";
+            alt = imgData[streetId][1];
+            
+            changeImg(streetId, url, alt);
+            toggleButtons(streetId);
+        }
+
+        function showAfter(streetId) {
+            url = imgDirectory + "/" + imgData[streetId][0] + "_after.png";
+            alt = imgData[streetId][2];
+            
+            changeImg(streetId, url, alt);
+            toggleButtons(streetId);
+        }
+    </script>
 </body>
 </html>
