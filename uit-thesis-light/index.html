@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Cooper Johnston</title>
+
+	<link rel="stylesheet" href="style.css">
+
+	<!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="title-area" class="content-box" >
+        <h1>uit-thesis-light</h1>
+
+        <p class="subtitle">A simple <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> document class for writing a master's or PhD thesis at UiT – The Arctic University of Norway</p>
+
+        <p>The appearance is a recreation of the visual style of <a href="https://github.com/egraff/uit-thesis/", target="_blank">uit-thesis</a> by Erlend Graff, following the guidelines of and using resources provided by the <a href="https://uit.no/ansatte/grafiskprofil" target="_blank">UiT Visual Profile</a> (Norwegian). The code is written from scratch independently.</p>
+
+        <p><span class="par-title">Author</span><a href="../index.html">Cooper Johnston</a></p>
+
+        <p><span class="par-title">License</span>MIT License; see <a href="https://raw.githubusercontent.com/cooper-johnston/uit-thesis-light/refs/heads/main/LICENSE" target="_blank">here</a> for details.</p>
+
+        <p><span class="par-title">Repository</span><a href="https://github.com/cooper-johnston/uit-thesis-light" target="_blank">https://github.com/cooper-johnston/uit-thesis-light</a></p>
+    </div>
+    <div id="main-content" class="content-box">
+        <h2>Getting started</h2>
+
+        <ol>
+            <li>Put the file <span class="verb-inline">thesis.cls</span> and the directory <span class="verb-inline">titlepage/</span> and all of the files inside it into the directory where you want to write your thesis.</li>
+
+            <li>Create a <span class="verb-inline">.tex</span> file for your thesis.</li>
+
+            <li>Begin this file with the line
+            <p class="verb-block">
+                \documentclass[TYPE]{thesis}
+            </p>
+            and replace <span class="verb-inline">TYPE</span> with <span class="verb-inline">master</span> or <span class="verb-inline">phd</span> depending on your thesis type.</li>
+
+            <li>In the preamble (before <span class="verb-inline">\begin{document}</span>), load the <span class="verb-inline">babel</span> package:
+            <p class="verb-block">
+                \usepackage[SECONDARY LANGUAGE,main=MAIN LANGUAGE]{babel}
+            </p>
+            and replace <span class="verb-inline">SECONDARY LANGUAGE</span> and <span class="verb-inline">MAIN LANGUAGE</span> with the languages for your document. The main language will be the language of the UiT logo on the title page and the language used in headings like "Table of Contents". The supported options are
+            <ul>
+                <li><span class="verb-inline">english</span>, or variants like <span class="verb-inline">USenglish</span> or <span class="verb-inline">UKenglish</span>, for English</li>
+                <li><span class="verb-inline">norsk</span> for Bokmål</li>
+                <li><span class="verb-inline">nynorsk</span> for Nynorsk</li>
+                <li><span class="verb-inline">samin</span> for Northern Sami.</li>
+            </ul>
+            <b>Loading the <span class="verb-inline">babel</span> package is required.</b></li>
+
+            <li>Recommended: Also in the preamble, load the ``stix2`` package to use the Stix Two font for body text:
+            <p class="verb-block">
+                \usepackage{stix2}
+            </p>
+            The order of the packages can sometimes lead to errors. If you load other packages, it is a good rule of thumb to put this one last. If you run into issues, try changing the order.</li>
+
+            <li>Also in the preamble, specify the fields for the title page.<br>
+            <b>Required fields:</b>
+            <ul>
+                <li><span class="verb-inline">\thesisFaculty{}</span></li>
+                <li><span class="verb-inline">\title{}</span></li>
+                <li><span class="verb-inline">\thesisSubtitle{}</span></li>
+                <li><span class="verb-inline">\author{}</span></li>
+                <li><span class="verb-inline">\thesisCourse{}</span> (can enter the name of your program if there is no course code for your thesis)</li>
+                <li><span class="verb-inline">\date{}</span></li>
+            </ul>
+            <b>Optional fields:</b>
+            <ul>
+                <li><span class="verb-inline">\thesisDepartment{}</span> (<em>institutt</em>)</li>
+                <li><span class="verb-inline">\thesisImage{}</span> (the file name of an image to be shown on the title page)</li>
+            </ul></li>
+
+            <li>Begin your document:
+            <p class="verb-block">
+                \begin{document}<br><br>
+                \maketitle<br><br>
+                CONTENT GOES HERE<br><br>
+                \end{document}
+            </p>
+            See the file <span class="verb-inline">example.tex</span> for more.</li>
+            
+            <li>Compile with pdf<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> or Lua<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> (pdf<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> is the default option on Overleaf).</li>
+        </ol>
+
+        <h2>More information</h2>
+
+        <p>The <span class="verb-inline">master</span> option uses A4 paper and 11 pt font, while the <span class="verb-inline">phd</span> option uses 17&#xd7;24 cm paper and 10 pt font.</p>
+
+        <p>The document class loads the following packages, in order:
+        <ol>
+            <li><span class="verb-inline">fontenc</span></li>
+            <li><span class="verb-inline">geometry</span></li>
+            <li><span class="verb-inline">emptypage</span></li>
+            <li><span class="verb-inline">microtype</span></li>
+            <li><span class="verb-inline">titlesec</span></li>
+            <li><span class="verb-inline">fancyhdr</span></li>
+            <li><span class="verb-inline">xcolor</span></li>
+            <li><span class="verb-inline">tikz</span></li>
+            <li><span class="verb-inline">csquotes</span></li>
+            <li><span class="verb-inline">eso-pic</span></li>
+            <li><span class="verb-inline">graphicx</span></li>
+            <li><span class="verb-inline">hyperref</span></li>
+            <li><span class="verb-inline">opensans</span>.</li>
+        </ol></p>
+
+        <p>The Northern Sami language is not fully defined in the <span class="verb-inline">babel</span> package. If you specify Northern Sami as your document language, the document class will tell <span class="verb-inline">babel</span> to use Finnish hyphenation patterns and <span class="verb-inline">csquotes</span> to use Norwegian quotation marks.</p>
+    </div>
+
+    <div id="footer">
+        <div class="content-box">
+            <p>Website made by Cooper Johnston. Last updated April 2025.</p>
+        </div>
+    </div>
+</body>
